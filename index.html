@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 600px;
+            margin: 20px auto;
+            align-content: center;
+            align-items: center;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        button{
+            margin-left: 46.8%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+         color container  <br>
+   
+    </div>
+    <button onclick="changeColor()">color change</button>
+
+
+    <script>
+        function Generatecolor(){
+
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            return rgb(`${r},${g},${b}`);
+        
+        function changeColor() {
+            let container = document.querySelector(".container");
+            let newColor = Generatecolor();
+            container.style.backgroundColor = newColor;
+            container.innerText = newColor;
+
+        }
+    }
+    </script>
+</body>
+</html>
